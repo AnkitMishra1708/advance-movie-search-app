@@ -5,7 +5,7 @@ import Register from "./Pages/Register.jsx";
 import Home from "./Pages/Home.jsx";
 import Detailed from "./Pages/Detailed.jsx";
 import SearchPage from "./Pages/SearchPage.jsx";
-import FavouriteList from "./Pages/favouriteList.jsx";
+import FavouriteList from "./Pages/FavouriteList.jsx";
 import WatchList from "./Pages/watchList.jsx";
 import Reviews from "./Pages/Reviews.jsx";
 import ProfilePage from "./Pages/ProfilePage.jsx";
