@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar.jsx";
 import { FetchCurrentUser } from "../Helper/FetchCurrentUser.jsx";
 import UpcomingVerticalSlider from "../Components/UpcomingHorizontalSlider.jsx";
 import HorizontalRow from "../Components/HorizontalRow.jsx";
-import { HomeSections } from "../config/HomeSections.jsx";
+import { HomeSections } from "../Config/HomeSections.jsx";
 import { useHomeSections } from "../hooks/useHomeSections.jsx";
 
 export default function Home() {
