@@ -102,6 +102,7 @@ const loginUser = asyncHandler(async (req, res) => {
   const option = {
     httpOnly: true,
     secure: true,
+    sameSite: "none",
   };
 
   return res
@@ -137,6 +138,7 @@ const logoutUser = asyncHandler(async (req, res) => {
   const option = {
     httpOnly: true,
     secure: true,
+    sameSite: "none",
   };
 
   return res
@@ -155,7 +157,7 @@ const getCurrentUser = asyncHandler(async (req, res) => {
 const markAsWatched = asyncHandler(async (req, res) => {
   const userId = req.user._id;
   const { mediaId, type } = req.body;
-  const mediaIdNum = Number(mediaId);  
+  const mediaIdNum = Number(mediaId);
 
   if (!mediaIdNum) {
     return res
