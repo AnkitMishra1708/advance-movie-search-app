@@ -27,7 +27,7 @@ export default function Login() {
 
       setTimeout(() => {
         navigate("/home");
-      }, 1000);
+      }, 500);
     } catch (err) {
       const message = err.response.data.message;
       toast.error(message);
