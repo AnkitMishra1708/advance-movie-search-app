@@ -23,10 +23,9 @@ const SearchBar = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search movies..."
-          className="w-full px-4 py-2 pl-10 border rounded-full
+          className="w-full py-2 pl-4 border rounded-full
           focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
-        <span className="absolute left-3 top-2.5 text-gray-400">🔍</span>
       </div>
     </form>
   );

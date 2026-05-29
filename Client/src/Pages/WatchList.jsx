@@ -6,6 +6,7 @@ import Section from "../Components/Section";
 import Card from "../Components/Card";
 import { MovieByIdApi } from "../Helper/MovieApi";
 import { SeriesByIdApi } from "../Helper/SeriesApi";
+import MovieChatBot from "../Components/MovieChatBot";
 
 const WatchList = () => {
   const navigate = useNavigate();
@@ -78,6 +79,7 @@ const WatchList = () => {
           </p>
         )}
       </div>
+      <MovieChatBot />
     </>
   );
 };

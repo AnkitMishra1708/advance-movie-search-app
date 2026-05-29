@@ -1,4 +1,4 @@
-# 🎬 PotatoFilms – Advanced Movie Search App
+# PotatoFilms – Advanced Movie Search App
 
 A full-stack movie discovery platform built with MERN stack.
 
@@ -8,6 +8,7 @@ A full-stack movie discovery platform built with MERN stack.
 - Reviews & Ratings
 - Movie & Series details
 - TMDB powered data
+- AI Chatbot
 
 ## Tech Stack
 - Frontend: React, TailwindCSS

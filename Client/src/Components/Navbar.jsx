@@ -22,7 +22,7 @@ const Navbar = () => {
     await FetchLogoutUser();
     setTimeout(() => {
       toast.success("User logged out Successfully!");
-      navigate("/");
+      navigate("/login");
     }, 700);
   };
 
@@ -46,25 +46,22 @@ const Navbar = () => {
       </div>
       <div className="bg-black sticky top-0 z-50 ">
         <nav className="w-full text-white bg-black/70 backdrop-blur-md shadow-2xl shadow-gray-800 px-6 py-4 flex justify-between items-center">
-          <Link to="/home">
-            <h1
-              onClick={handleRefresh}
-              className="text-2xl font-bold rounded cursor-pointer text-White"
-            >
-              PotatoFilms
-            </h1>
-          </Link>
+          <h1
+            onClick={handleRefresh}
+            className="text-2xl font-bold rounded cursor-pointer text-White"
+          >
+            PotatoFilms
+          </h1>
 
           <SearchBar />
 
           <div className="flex items-center font-medium gap-6">
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) =>
-                `cursor-pointer ${
-                  isActive
-                    ? "text-gray-600 font-semibold"
-                    : "hover:text-gray-600"
+                `cursor-pointer ${isActive
+                  ? "text-gray-600 font-semibold"
+                  : "hover:text-gray-600"
                 }`
               }
             >
@@ -73,10 +70,9 @@ const Navbar = () => {
             <NavLink
               to="/favourite-list"
               className={({ isActive }) =>
-                `cursor-pointer ${
-                  isActive
-                    ? "text-gray-600 font-semibold"
-                    : "hover:text-gray-600"
+                `cursor-pointer ${isActive
+                  ? "text-gray-600 font-semibold"
+                  : "hover:text-gray-600"
                 }`
               }
             >
@@ -85,10 +81,9 @@ const Navbar = () => {
             <NavLink
               to="/watch-list"
               className={({ isActive }) =>
-                `cursor-pointer ${
-                  isActive
-                    ? "text-gray-600 font-semibold"
-                    : "hover:text-gray-600"
+                `cursor-pointer ${isActive
+                  ? "text-gray-600 font-semibold"
+                  : "hover:text-gray-600"
                 }`
               }
             >
@@ -97,10 +92,9 @@ const Navbar = () => {
             <NavLink
               to="/reviews"
               className={({ isActive }) =>
-                `cursor-pointer ${
-                  isActive
-                    ? "text-gray-600 font-semibold"
-                    : "hover:text-gray-600"
+                `cursor-pointer ${isActive
+                  ? "text-gray-600 font-semibold"
+                  : "hover:text-gray-600"
                 }`
               }
             >
@@ -119,10 +113,9 @@ const Navbar = () => {
                   <NavLink
                     to="/profile-page"
                     className={({ isActive }) =>
-                      `cursor-pointer ${
-                        isActive
-                          ? "text-gray-600 font-semibold"
-                          : "hover:text-gray-600"
+                      `cursor-pointer ${isActive
+                        ? "text-gray-600 font-semibold"
+                        : "hover:text-gray-600"
                       }`
                     }
                   >

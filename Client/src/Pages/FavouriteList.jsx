@@ -13,6 +13,7 @@ import {
   removeFromCollection,
 } from "../Helper/CollectionApi.jsx";
 import CreateCollectionModal from "../Components/CreateCollectionModal.jsx";
+import MovieChatBot from "../Components/MovieChatBot.jsx";
 
 function FavouriteList() {
   const navigate = useNavigate();
@@ -162,6 +163,7 @@ function FavouriteList() {
           onCreate={handleCreateCollection}
         />
       </div>
+      <MovieChatBot />
     </>
   );
 }

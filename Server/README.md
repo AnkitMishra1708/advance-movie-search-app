@@ -1,4 +1,4 @@
-# 🎬 PotatoFilms – Backend
+# PotatoFilms – Backend
 
 Backend API for **PotatoFilms**, an advanced movie & TV discovery web application.
 
@@ -6,7 +6,7 @@ This backend handles authentication, user data, collections, reviews, and movie-
 
 ---
 
-## 🚀 Features
+## Features
 
 - User Authentication (Register / Login)
 - JWT Access Token based auth
@@ -21,7 +21,7 @@ This backend handles authentication, user data, collections, reviews, and movie-
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Node.js
 - Express.js
@@ -30,6 +30,7 @@ This backend handles authentication, user data, collections, reviews, and movie-
 - Bcrypt
 - JWT Authentication
 - TMDB API
+- Graq API
 - dotenv
 - nodemon
 

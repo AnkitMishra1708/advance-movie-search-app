@@ -26,7 +26,7 @@ export default function Login() {
       toast.success(res.message);
 
       setTimeout(() => {
-        navigate("/home");
+        navigate("/");
       }, 500);
     } catch (err) {
       const message = err.response.data.message;

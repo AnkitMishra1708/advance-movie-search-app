@@ -47,7 +47,7 @@ export default function Register() {
       <div className="min-h-screen bg-gray-900 text-white">
         <nav className="w-full bg-gray-950 shadow p-4 flex justify-between items-center">
           <h1 className="text-xl cursor-pointer font-bold">PotatoFilms</h1>
-          <Link to="/">
+          <Link to="/login">
             <button className="px-4 py-2 bg-blue-500 cursor-pointer text-white rounded-lg hover:bg-blue-600">
               Login
             </button>

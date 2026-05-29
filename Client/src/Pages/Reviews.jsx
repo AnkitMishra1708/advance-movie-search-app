@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { GetMyReview, RemoveReview } from "../Helper/ReviewApi";
 import Navbar from "../Components/Navbar";
+import MovieChatBot from "../Components/MovieChatBot";
 
 const Reviews = () => {
   const navigate = useNavigate();
@@ -119,6 +120,8 @@ const Reviews = () => {
           )}
         </div>
       </div>
+
+      <MovieChatBot />
     </>
   );
 };

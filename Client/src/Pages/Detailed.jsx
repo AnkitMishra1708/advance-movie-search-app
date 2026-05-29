@@ -22,6 +22,7 @@ import {
 import AddReview from "../Components/AddReview.jsx";
 import { GetReview } from "../Helper/ReviewApi.jsx";
 import { ReviewList } from "../Components/ReviewList.jsx";
+import MovieChatBot from "../Components/MovieChatBot.jsx";
 
 const Detailed = () => {
   const imgBaseUrl = "https://image.tmdb.org/t/p/original";
@@ -334,6 +335,8 @@ const Detailed = () => {
         movieId={id}
         onSelect={(collectionId) => handleAddOrRemove(collectionId)}
       />
+
+      <MovieChatBot />
     </>
   );
 };

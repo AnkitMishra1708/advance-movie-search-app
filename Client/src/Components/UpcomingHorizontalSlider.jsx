@@ -52,7 +52,7 @@ export default function UpcomingHorizontalSlider() {
             </div>
             <div className="absolute bottom-6 left-10 text-white z-10">
               <h2 className="text-3xl font-bold">{movies[index]?.title}</h2>
-              <p className="opacity-80">Don’t miss what’s next 🎬</p>
+              <p className="opacity-80">Upcoming movies</p>
             </div>
 
             <div className="absolute bottom-6 left-270 text-white z-10">

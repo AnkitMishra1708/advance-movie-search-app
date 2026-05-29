@@ -5,8 +5,11 @@ import UpcomingVerticalSlider from "../Components/UpcomingHorizontalSlider.jsx";
 import HorizontalRow from "../Components/HorizontalRow.jsx";
 import { HomeSections } from "../Config/HomeSections.jsx";
 import { useHomeSections } from "../hooks/useHomeSections.jsx";
+import { useNavigate } from "react-router-dom";
+import MovieChatBot from "../Components/MovieChatBot.jsx";
 
 export default function Home() {
+  const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const { data, loading, error } = useHomeSections(HomeSections);
 
@@ -14,6 +17,9 @@ export default function Home() {
     async function currentUser() {
       const response = await FetchCurrentUser();
       const data = response;
+      if (data === undefined) {
+        navigate("/login");
+      }
       setUser(data);
     }
     currentUser();
@@ -48,6 +54,8 @@ export default function Home() {
             error={error[section.key]}
           />
         ))}
+
+        <MovieChatBot />
 
         <div className="flex justify-center">
           <p className="text-xl mt-5 text-gray-400">

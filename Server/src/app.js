@@ -23,11 +23,13 @@ import collectionRouter from "./routes/collection.routes.js";
 import reviewRouter from "./routes/review.routes.js";
 import tmdbRouter from "./routes/tmdb.routes.js";
 import tmdbSeriesRouter from "./routes/tmdbSeries.routes.js";
+import chatRouter from "./routes/chat.routes.js";
 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/collection", collectionRouter);
 app.use("/api/v1/review", reviewRouter);
 app.use("/api/v1/movies", tmdbRouter);
 app.use("/api/v1/series", tmdbSeriesRouter);
+app.use("/api/v1/chat", chatRouter);
 
 export { app };

@@ -5,6 +5,7 @@ import Card from "../Components/Card.jsx";
 import { SearchApi } from "../Helper/MovieApi.jsx";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import MovieChatBot from "../Components/MovieChatBot";
 
 const SearchPage = () => {
   const navigate = useNavigate();
@@ -84,7 +85,10 @@ const SearchPage = () => {
           ))}
         </Section>
       </div>
+
+      <MovieChatBot />
     </div>
+    
   );
 };
 
