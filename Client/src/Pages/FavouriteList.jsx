@@ -81,11 +81,14 @@ function FavouriteList() {
       <Navbar />
 
       <div className="min-h-screen px-10 pb-15 py-8 bg-black text-white">
-        <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold mb-10">In My Heart 💗</h1>
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold">
+            In My Heart 💗
+          </h1>
+
           <button
             onClick={() => setOpenModal(true)}
-            className="px-4 py-2 bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-500"
+            className="w-full sm:w-auto px-4 py-2 bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-500"
           >
             + Create Collection
           </button>
@@ -98,28 +101,32 @@ function FavouriteList() {
             No collections yet. Create your first one 🎬
           </p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {collections?.map((col, i) => (
               <div
                 key={i}
                 onClick={() => navigate(`/collection/${col?._id}`)}
-                className="bg-gray-800 rounded-xl p-4 cursor-pointer hover:scale-110 transition duration-300 mb-10"
+                className="bg-gray-800 rounded-xl p-4 sm:p-5 cursor-pointer hover:scale-[1.02] md:hover:scale-105 transition-all duration-300"
               >
-                <div className="flex justify-between">
-                  <h2 className="text-xl font-semibold mb-2">{col?.name}</h2>
-                  <div>
-                    <span
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleRemoveCollection(col?._id);
-                      }}
-                      className="bg-red-500 px-2 rounded-full hover:bg-red-700"
-                    >
-                      X
-                    </span>
-                  </div>
+                <div className="flex items-start justify-between gap-3">
+                  <h2 className="text-lg sm:text-xl font-semibold wrap-break-word">
+                    {col?.name}
+                  </h2>
+
+                  <span
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleRemoveCollection(col?._id);
+                    }}
+                    className="shrink-0 bg-red-500 px-2.5 py-1 rounded-full text-sm hover:bg-red-700"
+                  >
+                    ✕
+                  </span>
                 </div>
-                <p className="text-gray-400">{col?.description}</p>
+
+                <p className="text-gray-400 text-sm sm:text-base mt-2 wrap-break-word line-clamp-3">
+                  {col?.description}
+                </p>
               </div>
             ))}
           </div>

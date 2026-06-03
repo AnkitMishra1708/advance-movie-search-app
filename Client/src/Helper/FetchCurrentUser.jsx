@@ -2,16 +2,13 @@ import Api from "./Api";
 
 async function FetchCurrentUser() {
   try {
-    const response = await Api.get("/users/current-user", {
-      method: "GET",
-      credentials: "include",
-    });
-
+    const response = await Api.get("/users/current-user");
     return response.data.data;
   } catch (err) {
     console.error("Error fetching current user:", err);
+    return null;
   }
-}
+} 
 
 async function FetchLogoutUser() {
   try {

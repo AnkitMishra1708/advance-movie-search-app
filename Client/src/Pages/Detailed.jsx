@@ -208,78 +208,85 @@ const Detailed = () => {
               </div>
             </div>
 
-            <div className="max-w-7xl mx-auto py-7 grid grid-cols-1 md:grid-cols-3 gap-x-17">
-              <div>
+            <div className="max-w-7xl mx-auto py-7 px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+              <div className="flex justify-center lg:justify-start">
                 <img
                   src={imgBaseUrl + movies.poster_path}
                   alt={movies.title}
-                  className="rounded-2xl shadow-xl"
+                  className="rounded-2xl shadow-xl w-full max-w-[280px] sm:max-w-[350px] lg:max-w-full"
                 />
               </div>
 
-              <div className="md:col-span-2 space-y-6">
-                <div className="space-x-4 flex items-center">
-                  <span className="text-3xl font-bold">Movie Info</span>
-                  <span className="text-gray-300">
+              <div className="lg:col-span-2 space-y-6">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+                  <span className="text-2xl sm:text-3xl font-bold">
+                    Movie Info
+                  </span>
+
+                  <span className="text-gray-300 text-sm sm:text-base">
                     • {movies.runtime || movies.episode_run_time}m
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 text-gray-300">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300">
                   <p>
                     <span className="font-semibold text-white">Status:</span>{" "}
                     {movies.status}
                   </p>
+
                   <p>
                     <span className="font-semibold text-white">Release:</span>{" "}
                     {movies.release_date || movies.first_air_date}
                   </p>
+
                   <p>
                     <span className="font-semibold text-white">Rating:</span> ⭐{" "}
                     {movies.vote_average}
                   </p>
+
                   <p>
                     <span className="font-semibold text-white">Language:</span>{" "}
                     {movies.original_language}
                   </p>
+
                   <p>
-                    <span className="font-semibold text-white">
-                      Popularity:
-                    </span>{" "}
+                    <span className="font-semibold text-white">Popularity:</span>{" "}
                     {movies.popularity}
                   </p>
+
                   <p>
-                    <span className="font-semibold text-white">
-                      Age Rating:
-                    </span>{" "}
+                    <span className="font-semibold text-white">Age Rating:</span>{" "}
                     {movies.adult ? "18+" : "Under 18"}
                   </p>
-                  {type == "movie" ? (
+
+                  {type == "movie" && (
                     <>
                       <p>
                         <span className="font-semibold text-white">
                           Budget:
                         </span>{" "}
-                        $ {movies.budget}
+                        $ {movies.budget?.toLocaleString()}
                       </p>
+
                       <p>
                         <span className="font-semibold text-white">
                           Revenue:
                         </span>{" "}
-                        $ {movies.revenue}
+                        $ {movies.revenue?.toLocaleString()}
                       </p>
                     </>
-                  ) : (
-                    <></>
                   )}
                 </div>
 
-                <div className="flex flex-wrap gap-3">
-                  <span className="font-semibold text-white">Genre:</span>{" "}
+                <div className="flex flex-wrap gap-2 sm:gap-3">
+                  <span className="font-semibold text-white w-full sm:w-auto">
+                    Genre:
+                  </span>
+
                   {movies.genres?.map((genre) => (
                     <div
                       key={genre.id}
-                      className="px-4 py-1 bg-gray-800 rounded-full text-sm"
+                      className="px-3 sm:px-4 py-1 bg-gray-800 rounded-full text-xs sm:text-sm"
                     >
                       {genre.name}
                     </div>
@@ -287,8 +294,11 @@ const Detailed = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold mb-2">Overview</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                    Overview
+                  </h3>
+
+                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                     {movies.overview}
                   </p>
                 </div>

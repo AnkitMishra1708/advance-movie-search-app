@@ -27,15 +27,17 @@ const RatingSelector = ({ onChange }) => {
   };
 
   return (
-    <div className="w-full flex mb-2 cursor-pointer">
-      <div className="flex bg-[#000000] p-1 rounded-full border border-gray-200 cursor-pointer">
+    <div className="w-full mb-2 overflow-x-auto scrollbar-hide">
+      <div className="flex w-max bg-[#000000] p-1 rounded-full border border-gray-200">
         {ratings.map((rating) => (
           <button
             key={rating.value}
             onClick={() => handleSelect(rating)}
-            className={`px-5 py-2 rounded-full transition-all cursor-pointer duration-200
-            ${getColorClasses(rating.value, selected)}
-          `}
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2 
+        text-xs sm:text-sm md:text-base 
+        rounded-full whitespace-nowrap 
+        transition-all duration-200 cursor-pointer
+        ${getColorClasses(rating.value, selected)}`}
           >
             {rating.label}
           </button>

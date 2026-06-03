@@ -22,27 +22,55 @@ const ProfilePage = () => {
     <>
       <Navbar />
 
-      <div className="min-h-screen bg-gray-950 text-white mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center pt-10 mb-10">
-          Hey, {user?.fullName || "User"} 👋
-        </h2>
-        <div className="text-2xl px-10 mt-10 space-y-10">
-          <div>
-            <span> User: </span><br />
-            <span> {user?.fullName} </span>
+      <div className="min-h-screen bg-gray-950 text-white px-4 py-10">
+        <div className="max-w-3xl mx-auto">
+
+          <div className="flex flex-col items-center mb-10">
+            <div className="w-24 h-24 rounded-full bg-green-500 flex items-center justify-center text-4xl font-bold">
+              {user?.fullName?.charAt(0).toUpperCase() || "U"}
+            </div>
+
+            <h2 className="text-3xl font-bold mt-4">
+              Hey, {user?.fullName || "User"}
+            </h2>
+
+            <p className="text-gray-400 mt-1">
+              Welcome back Chief 🫡
+            </p>
           </div>
-          <div>
-            <span> Your email: </span><br />
-            <span> {user?.email} </span>
+
+          <div className="bg-gray-900 rounded-2xl p-6 sm:p-8 shadow-lg space-y-6">
+            <div>
+              <p className="text-gray-400 text-sm">User Name</p>
+              <p className="text-lg font-semibold">
+                {user?.fullName || "N/A"}
+              </p>
+            </div>
+
+            <div>
+              <p className="text-gray-400 text-sm">Email Address</p>
+              <p className="text-lg font-semibold wrap-break-word">
+                {user?.email || "N/A"}
+              </p>
+            </div>
+
+            <div>
+              <p className="text-gray-400 text-sm">Phone Number</p>
+              <p className="text-lg font-semibold">
+                {user?.number || "N/A"}
+              </p>
+            </div>
+
+            <div>
+              <p className="text-gray-400 text-sm">Account Created</p>
+              <p className="text-lg font-semibold">
+                {user?.createdAt
+                  ? new Date(user.createdAt).toLocaleDateString()
+                  : "N/A"}
+              </p>
+            </div>
           </div>
-          <div>
-            <span> Your Number: </span><br />
-            <span> {user?.number} </span>
-          </div>
-          <div>
-            <span> Account Created: </span><br />
-            <span>{user?.createdAt} </span>
-          </div>
+
         </div>
       </div>
     </>

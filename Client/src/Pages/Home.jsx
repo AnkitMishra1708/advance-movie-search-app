@@ -17,8 +17,9 @@ export default function Home() {
     async function currentUser() {
       const response = await FetchCurrentUser();
       const data = response;
-      if (data === undefined) {
-        navigate("/login");
+      if (!data) {
+        navigate("/login", { replace: true });
+        return;
       }
       setUser(data);
     }
